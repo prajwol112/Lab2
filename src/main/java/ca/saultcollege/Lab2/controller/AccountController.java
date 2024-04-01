@@ -20,6 +20,52 @@ import org.springframework.http.HttpStatus;
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class AccountController {
+
+    @GetMapping("/login")
+    public ResponseEntity<String> getLogin(){ // map a URL to a method
+        String s=
+
+                "<form hx-post=\"/signup\" hx-target=\"this\" hx-swap=\"outerHTML\">" +
+                        "    <div>" +
+                        "        <label>Username</label>" +
+                        "        <input type=\"text\" name=\"username\" value=\"user\">" +
+                        "    </div>" +
+                        "    <div class=\"form-group\">" +
+                        "        <label>Password</label>" +
+                        "        <input type=\"password\" name=\"password\" value=\"password\">" +
+                        "    </div>" +
+                        "    <button class=\"btn\">Submit</button>" +
+                        "    <button class=\"btn\" hx-get=\"/signup\">Cancel</button>" +
+                        "</form>";
+        return ResponseEntity.ok(s);
+    }
+
+
+    @GetMapping("/signin")
+    public ResponseEntity<String> getSignin(){ // map a URL to a method
+        String s="<form hx-post=\"/auth/login\" hx-target=\"this\" hx-swap=\"outerHTML\">" +
+                "    <div>" +
+                "        <label>Username</label>" +
+                "        <input type=\"text\" name=\"username\" value=\"user\">" +
+                "    </div>" +
+                "    <div class=\"form-group\">" +
+                "        <label>Password</label>" +
+                "        <input type=\"password\" name=\"password\" value=\"password\">" +
+                "    </div>" +
+                "    <button class=\"btn\">Submit</button>" +
+                "    <button class=\"btn\" hx-get=\"/signup\">Cancel</button>" +
+                "</form>";
+        return ResponseEntity.ok(s);
+    }
+
+//    // just here for reference: call it with http://localhost:8080/signup2?email=f.c@g.c
+
+    @GetMapping("/signup2")
+    @ResponseBody
+    public String createAccount2(@RequestParam String email) {
+        return "email: " + email;
+    }
+
     @Autowired
     private AccountRepository accountRepository;
 

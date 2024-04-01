@@ -1,0 +1,57 @@
+<!--    https://htmx.org/examples/click-to-edit/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Signin Demo</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <base href="/" />
+    <link rel="stylesheet" type="text/css" href="/npm/bootstrap/dist/css/bootstrap.min.css" />
+    <script async src="/npm/es-module-shims"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "bootstrap": "/npm/bootstrap",
+                "@popperjs/core": "/npm/@popperjs/core",
+                "htmx": "/npm/htmx.org"
+            }
+        }
+    </script>
+    <script type="module">
+        import { Toast } from 'bootstrap';
+        import 'htmx';
+        htmx.on("notice", (e) => {
+            document.getElementById("toast-body").innerText = e.detail.value;
+            new Toast(document.getElementById("toast"), { delay: 2000 }).show();
+        });
+    </script>
+</head>
+<body>
+<form hx-post="/signin" hx-target="this" hx-swap="outerHTML">
+    <div>
+        <label>First Name</label>
+        <input type="text" name="firstname" value="Joe">
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" name="lastname" value="Blow">
+    </div>
+    <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" value="joe@blow.com">
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" value="xxxxx">
+    </div>
+    <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" name="confirmPassword" value="xxxxx">
+    </div>
+    <button class="btn">Submit</button>
+    <button class="btn" hx-get="/signin">Cancel</button>
+</form>
+</body>
+</html>
