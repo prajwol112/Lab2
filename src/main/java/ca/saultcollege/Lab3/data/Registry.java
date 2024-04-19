@@ -1,4 +1,4 @@
-package ca.saultcollege.Lab2.data;
+package ca.saultcollege.Lab3.data;
 
 import jakarta.persistence.*;
 
@@ -39,3 +39,4 @@ public class Registry {
         this.registryValue = registryValue;
     }
 }
+

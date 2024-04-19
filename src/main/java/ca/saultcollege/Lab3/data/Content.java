@@ -1,5 +1,4 @@
-package ca.saultcollege.Lab2.data;
-
+package ca.saultcollege.Lab3.data;
 
 
 public class Content {
@@ -17,4 +16,5 @@ public class Content {
         this.content=content;
     }
 }
+
 

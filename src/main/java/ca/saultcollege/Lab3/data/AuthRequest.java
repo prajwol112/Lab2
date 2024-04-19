@@ -1,5 +1,4 @@
-package ca.saultcollege.Lab2.data;
-
+package ca.saultcollege.Lab3.data;
 
 
 public class AuthRequest {
@@ -22,4 +21,5 @@ public class AuthRequest {
         this.password = password;
     }
 }
+
 

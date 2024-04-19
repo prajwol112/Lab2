@@ -1,8 +1,8 @@
-package ca.saultcollege.Lab2.security;
+package ca.saultcollege.Lab3.security;
 
 
 
-import ca.saultcollege.Lab2.data.Account;
+import ca.saultcollege.Lab3.data.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;

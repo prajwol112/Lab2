@@ -1,7 +1,7 @@
-package ca.saultcollege.Lab2.repositories;
+package ca.saultcollege.Lab3.repositories;
 
 
-import ca.saultcollege.Lab2.data.Registry;
+import ca.saultcollege.Lab3.data.Registry;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

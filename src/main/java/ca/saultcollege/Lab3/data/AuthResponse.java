@@ -1,5 +1,4 @@
-package ca.saultcollege.Lab2.data;
-
+package ca.saultcollege.Lab3.data;
 
 
 public class AuthResponse {
@@ -27,4 +26,5 @@ public class AuthResponse {
         this.accessToken = accessToken;
     }
 }
+
 

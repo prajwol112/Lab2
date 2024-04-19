@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ca.saultcollege</groupId>
-	<artifactId>Lab2</artifactId>
+	<artifactId>Lab3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Lab2_Prajwol_GC</name>
 	<description>Lab2</description>

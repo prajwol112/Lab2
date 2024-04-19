@@ -1,7 +1,7 @@
-package ca.saultcollege.Lab2.security;
+package ca.saultcollege.Lab3.security;
 
 
-import ca.saultcollege.Lab2.data.Account;
+import ca.saultcollege.Lab3.data.Account;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

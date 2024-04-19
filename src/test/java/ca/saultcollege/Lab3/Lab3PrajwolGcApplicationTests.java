@@ -1,10 +1,10 @@
-package ca.saultcollege.Lab2;
+package ca.saultcollege.Lab3;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Lab2PrajwolGcApplicationTests {
+class Lab3PrajwolGcApplicationTests {
 
 	@Test
 	void contextLoads() {

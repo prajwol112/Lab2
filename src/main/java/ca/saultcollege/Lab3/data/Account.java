@@ -1,4 +1,4 @@
-package ca.saultcollege.Lab2.data;
+package ca.saultcollege.Lab3.data;
 
 
 import jakarta.persistence.*;
@@ -7,6 +7,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
+
 @Entity
 @Table(name = "accounts")
 public class Account implements UserDetails {
@@ -29,6 +31,7 @@ public class Account implements UserDetails {
         this.email = email;
         this.password = password;
     }
+
 
     public void setId(Integer id) {
         this.id = id;
@@ -85,7 +88,8 @@ public class Account implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return new ArrayList<>();
+        return new ArrayList();
+//        return null;
     }
     @Override
     public boolean isAccountNonExpired() {
@@ -105,4 +109,5 @@ public class Account implements UserDetails {
     }
 
 }
+
 
